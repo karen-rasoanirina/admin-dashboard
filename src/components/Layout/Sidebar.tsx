@@ -15,14 +15,13 @@ const Sidebar = () => {
                     <p className="text-xs text-slate-500 dark:text-slate-400">
                     Admin Panel
                     </p>
-                </div>
-                
+                </div>        
             </div>
-            
-            
-
-
         </div>
+        {/*Navgation*/}
+        <nav>
+            
+        </nav>
 
     </div>
   )

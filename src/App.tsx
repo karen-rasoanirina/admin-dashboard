@@ -1,5 +1,5 @@
 import Sidebar from './components/Layout/Sidebar';
-import './App.css'
+import Header from './components/Layout/Header';
 
 function App() {
   
@@ -9,6 +9,7 @@ function App() {
     transition-all duration-500"> 
       <div className='flex h-screen overflow-hidden'>
         <Sidebar/>
+        <Header/>
 
       </div>
     </div>
