@@ -1,7 +1,8 @@
 import Sidebar from './components/Layout/Sidebar';
 import Header from './components/Layout/Header';
 import { useState } from 'react';
-type Page ='dashboard' | 'settings'| 'profile'
+import Dashboard from './components/Dashboard/Dashboard';
+type Page ='dashboard' | 'settings'| 'profile' | 'analytics' | 'users' | 'ecommerce' | 'inventory' |'transaction' |'message' | 'calendar' |'reports'
 function App() {
   const [sideBarCollapsed, setsideBarCollapsed] = useState(false);
   const [currentPage, setCurrentPage] = useState<Page>('dashboard')
@@ -19,9 +20,9 @@ function App() {
 
         <div className='flex-1 flex flex-col'>
           <Header/>
-          <main className='flex-1 p-6'>
+          <main className='flex-1 p-6 overflow-y-auto '>
             <div className='bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl p-6'>
-              contenu ici
+             {currentPage === 'dashboard' &&  <Dashboard/>}
             </div>
           </main>
         </div>      

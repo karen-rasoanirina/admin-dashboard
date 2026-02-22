@@ -22,7 +22,7 @@ const Header = () => {
             <input 
             type="text" 
             placeholder="Search Anything"
-            className="w-full pl-10 pr-4 py-2.5 bg-slate-100 dark:bg-slate-800 
+            className="w-40 -ml-3 md:w-full pl-10 pr-4 py-2.5 bg-slate-100 dark:bg-slate-800 
             border border-slate-200 dark:border-slate-800 dark:text-white placeholder-slate-500 placeholder:text-xs
             focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all rounded-xl"
             />
