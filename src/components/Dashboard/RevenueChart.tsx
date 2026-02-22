@@ -37,8 +37,8 @@ const data = [
             </div>
             <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-blue-500"></div>
-                    <div className="text-sm text-slate-600 dark:text-slate-400 rounded-full"> 
+                    <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 "> 
                         <span>Revenue</span>
                     </div>
                 </div>

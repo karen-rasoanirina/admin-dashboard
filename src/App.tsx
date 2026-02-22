@@ -1,14 +1,21 @@
 import Sidebar from './components/Layout/Sidebar';
 import Header from './components/Layout/Header';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Dashboard from './components/Dashboard/Dashboard';
 type Page ='dashboard' | 'settings'| 'profile' | 'analytics' | 'users' | 'ecommerce' | 'inventory' |'transaction' |'message' | 'calendar' |'reports'
 function App() {
   const [sideBarCollapsed, setsideBarCollapsed] = useState(false);
   const [currentPage, setCurrentPage] = useState<Page>('dashboard')
-  
+  useEffect(() => {
+  // si l'écran est petit (<768px), on collapse par défaut
+  if (window.innerWidth < 768) {
+    setsideBarCollapsed(true)
+  }
+}, [])
 
   return (
+
+
     <div className="min-h-screen bg-linear-to-br from-slate-50 via-blue-200 to-indigo-500 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900
     transition-all duration-500"> 
       <div className='flex min-h-screen'>
