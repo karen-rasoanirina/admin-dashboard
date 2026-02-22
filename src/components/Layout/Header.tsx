@@ -1,4 +1,4 @@
-import { Menu, Filter, Search, Plus, Sun, Bell, Settings, ChevronDown } from "lucide-react"
+import { Filter, Search, Plus, Sun, Bell, Settings, ChevronDown } from "lucide-react"
 
 const Header = () => {
   return (
@@ -7,9 +7,7 @@ const Header = () => {
         
         {/* left */}
           <div className="flex items-center space-x-4">
-          <button className="rounded-lg p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-500">
-            <Menu className="w-5 h-5"/>
-          </button>
+         
         
         <div className="hidden md:block">
           <h1 className="text-xl font-bold text-slate-800 dark:text-white">Dashboard</h1>
