@@ -53,8 +53,8 @@ const StatsGrid = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
         {stats.map((stat, index) => (
-            <div className=" bg-white/80 backdrop-blur-sm dark:bg-slate-900 rounded-xl p-4 border
-        border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 overflow-hiden group" key={index}>
+            <div className=" bg-white/80 backdrop-blur-xl dark:bg-slate-900 rounded-xl p-4 border
+        border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 group" key={index}>
             <div className="flex items-start justify-between">
                 <div className="">
                     <p className="text-sm font-medium mb-2 text-slate-600 dark:text-slate-200">

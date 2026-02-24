@@ -13,11 +13,33 @@ import {
     Zap,
     Menu
  }from "lucide-react"
-import { useState } from "react"
+import { useState} from "react"
+import type { Dispatch, SetStateAction } from "react"
+
+type Page ='dashboard' |
+ 'settings'|
+ 'profile' |
+  'analytics' |
+   'users' |
+    'ecommerce' | 
+   'inventory' |
+   'transaction' |
+   'message' |
+    'calendar' |
+    'reports'
+
+type MenuItem = {
+  id: Page
+  icon: any
+  label: string
+  active?: boolean
+  badge?: string
+  count?: string
+  submenu?: { id: string; label: string }[]
+}
 
 
-
-const menuItems= [
+const menuItems: MenuItem[]= [
 {
     id : 'dashboard',
     icon : LayoutDashboard,
@@ -81,7 +103,7 @@ const menuItems= [
 }
 
 ]
-type Page ='dashboard' | 'settings'| 'profile' | 'analytics' | 'users' | 'ecommerce' | 'inventory' |'transaction' |'message' | 'calendar' |'reports' |boolean
+
 type SideBarPropsType ={
     collapsed : boolean,
     onToggle : ()=>void,
@@ -89,6 +111,7 @@ type SideBarPropsType ={
     onPageChange: Dispatch<SetStateAction<Page>>
 
 }
+ 
 
 const Sidebar = ({collapsed, onToggle, currentPage, onPageChange}:SideBarPropsType) => {
     const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set(['analytics']))
@@ -138,7 +161,7 @@ setExpandedItems(newExpanded)
                 <button 
                 className={`w-full flex items-center justify-between p-3 rounded-xl hover:bg-slate-100
                 ${currentPage === item.id || item.active ? "bg-linear-to-r from-blue-500 to-purple-500 text-white" :
-                    "  dark:text-slate-200 text-slate-700 bg-white/80"
+                    "  dark:text-slate-200 dark:bg-slate-900 text-slate-700 bg-white/80"
                 }`}
                 onClick={()=>{
                     if (item.submenu){
